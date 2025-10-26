@@ -1,0 +1,15 @@
+insert into creatip_role (name) values('ROLE_ADMIN');
+insert into creatip_role (name) values('ROLE_MANAGER');
+
+-- USER ROLE (AUTHORITY)
+insert into creatip_user_role values('user1','ROLE_ADMIN');
+insert into creatip_user_role values('user2','ROLE_ADMIN');
+insert into creatip_user_role values('user3','ROLE_ADMIN');
+insert into creatip_user_role values('user3','ROLE_MANAGER');
+
+select * from creatip_user;
+
+--Password : user1,user2, user3
+insert into creatip_user (username,password_hash,activated,first_name,created_date,created_by) values ('user1','$2y$10$sWKj/AGayoZxSVFJAtxN/.LmrzzEXBWvIH3NdwyIZ55hYQlWElXLK',1,'admin',sysdate(),system_user());
+insert into creatip_user (username,password_hash,activated,first_name,created_date,created_by) values ('user2','$2y$10$fUpyBbEiOhgnC9ADBYd/3Oqmx1QrIPnfMCWYbrc4h76/PKf3mK89G',1,'admin',sysdate(),system_user());
+insert into creatip_user (username,password_hash,activated,first_name,created_date,created_by) values ('user3','$2y$10$tzB8D7Xief2sXoVF4LkApuS2xWu9o8ou/9azf0bdtrBj85074kkxW',1,'admin',sysdate(),system_user());
